@@ -15,20 +15,11 @@
     background-color: #f9f9f9;
   }
 
-  /* 容器：設定 Flexbox 讓文字與圖片並排 */
   .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
     background: #ffffff;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  }
-
-  .content-left {
-    flex: 1;
   }
 
   h1 {
@@ -36,12 +27,11 @@
     color: #1a1a1a;
   }
 
-  /* 下載按鈕樣式 */
   .download-btn {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #ff6700; /* 小米橘色主題 */
+    background-color: #ff6700;
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
@@ -52,50 +42,23 @@
   .download-btn:hover {
     background-color: #e05b00;
   }
-
-  /* 右側圖片樣式 */
-  .mascot-right img {
-    max-width: 180px;
-    height: auto;
-    display: block;
-  }
-
-  /* 手機螢幕自動切換為單欄 */
-  @media (max-width: 600px) {
-    .hero-container {
-      flex-direction: column-reverse;
-      text-align: center;
-    }
-    .mascot-right img {
-      max-width: 140px;
-      margin: 0 auto 20px;
-    }
-  }
 </style>
 </head>
 
 <body>
 
 <div class="hero-container">
-  <!-- 左側文字內容 -->
-  <div class="content-left">
-    <h1>小米手環筆記本</h1>
-    <p>歡迎來到小米手環筆記本官方網站</p>
-    <p>記錄您的健康數據與生活習慣</p>
-    <p>這是一款協助管理健康資料的 Android App。</p>
+  <h1>小米手環筆記本</h1>
+  <p>歡迎來到小米手環筆記本官方網站</p>
+  <p>記錄您的健康數據與生活習慣</p>
+  <p>這是一款協助管理健康資料的 Android App。</p>
 
-    <a href="https://github.com/owenlu888-boop/XiaomiBandNotebook/releases"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="download-btn">
-       📥 下載最新版
-    </a>
-  </div>
-
-  <!-- 右側機器人圖片區塊（請填入您的圖片路徑） -->
-  <div class="mascot-right">
-    <img src="robot.png" alt="吉祥物圖示">
-  </div>
+  <a href="https://github.com/owenlu888-boop/XiaomiBandNotebook/releases"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="download-btn">
+     📥 下載最新版
+  </a>
 </div>
 
 </body>
