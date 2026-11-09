@@ -71,13 +71,14 @@
 
   .video-container {
     position: relative;
-    padding-bottom: 177.78%; /* 9:16 直式比例 */
-    height: 0;
-    overflow: hidden;
+    width: 100%;
     max-width: 315px;
+    aspect-ratio: 9 / 16;
     margin: 15px auto 0;
     border-radius: 12px;
+    overflow: hidden;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background: #000;
   }
 
   .video-container iframe {
