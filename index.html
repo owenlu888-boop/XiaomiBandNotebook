@@ -16,15 +16,17 @@
   }
 
   .hero-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .hero-main {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    background: #ffffff;
-    padding: 40px;
-    border-linejoin: round;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
 
   .content-left {
@@ -59,8 +61,35 @@
     border-radius: 8px;
   }
 
+  /* YouTube 影片區塊樣式 */
+  .video-section {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #eee;
+    text-align: center;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 177.78%; /* 9:16 直式比例 */
+    height: 0;
+    overflow: hidden;
+    max-width: 315px;
+    margin: 15px auto 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   @media (max-width: 600px) {
-    .hero-container {
+    .hero-main {
       flex-direction: column-reverse;
       text-align: center;
     }
@@ -75,23 +104,39 @@
 <body>
 
 <div class="hero-container">
-  <div class="content-left">
-    <h1>小米手環筆記本</h1>
-    <p>歡迎來到小米手環筆記本官方網站</p>
-    <p>記錄您的健康數據與生活習慣</p>
-    <p>這是一款協助管理健康資料的 Android App。</p>
+  <!-- 上半部：文字與圖片並排 -->
+  <div class="hero-main">
+    <div class="content-left">
+      <h1>小米手環筆記本</h1>
+      <p>歡迎來到小米手環筆記本官方網站</p>
+      <p>記錄您的健康數據與生活習慣</p>
+      <p>這是一款協助管理健康資料的 Android App。</p>
 
-    <a href="https://github.com/owenlu888-boop/XiaomiBandNotebook/releases"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="download-btn">
-       📥 下載最新版
-    </a>
+      <a href="https://github.com/owenlu888-boop/XiaomiBandNotebook/releases"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="download-btn">
+         📥 下載最新版
+      </a>
+    </div>
+
+    <div class="mascot-right">
+      <img src="小米手環內部.png" alt="小米手環內部圖示">
+    </div>
   </div>
 
-  <div class="mascot-right">
-    <!-- 直接對應您上傳的中文檔名 -->
-    <img src="小米手環內部.png" alt="小米手環內部圖示">
+  <!-- 下半部：YouTube 影片嵌入區塊 -->
+  <div class="video-section">
+    <h3 style="margin-bottom: 12px; color: #333;">📺 App 實際操作示範</h3>
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/d0R6uLzogSw" 
+        title="小米手環筆記本 App 操作示範" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 </div>
 
